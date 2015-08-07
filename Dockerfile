@@ -24,3 +24,7 @@ RUN apt-get install ffmpeg mongodb-clients -y
 RUN npm install -g coffee-script
 RUN npm install -g node-gyp
 RUN npm install node-pre-gyp -g
+
+# CLEAN UP:
+RUN apt-get clean
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
