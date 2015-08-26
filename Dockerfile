@@ -21,8 +21,8 @@ RUN apt-get install eyed3 -y
 RUN apt-get install ffmpeg mongodb-clients -y
 
 # Image editing utils:
-RUN apt-get update
-RUN apt-get upgrade
+RUN apt-get update -y
+RUN apt-get upgrade -y
 RUN curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | bash -
 
 RUN npm install -g coffee-script
