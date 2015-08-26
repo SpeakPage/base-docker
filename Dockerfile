@@ -20,6 +20,8 @@ RUN apt-get install sox libsox-dev libsox-fmt-all -y
 RUN apt-get install eyed3 -y
 RUN apt-get install ffmpeg mongodb-clients -y
 
+# Image editing utils:
+RUN curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | bash -
 
 RUN npm install -g coffee-script
 RUN npm install -g node-gyp
