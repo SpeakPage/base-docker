@@ -11,5 +11,4 @@ RUN apt-get install software-properties-common libavahi-client3 git python cmake
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN curl -s https://raw.githubusercontent.com/lovell/sharp/master/preinstall.sh | bash - \
-	&& npm install -g coffee-script node-gyp node-pre-gyp -g
+RUN npm install -g coffee-script node-gyp node-pre-gyp -g
