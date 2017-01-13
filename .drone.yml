@@ -1,11 +1,11 @@
-publish:
+
+pipeline:
   docker:
-    repo: speakpage/base-docker
+    image: plugins/docker
+    repo: docker.stackdot.com/speakpage/base-docker
     tag:
-      - '$${BRANCH/master/latest}'
-      - '$$BRANCH.$$BUILD_NUMBER'
-    registry: docker.stackdot.com
-    username: $$DRONE_REGISTRY_USER
-    password: $$DRONE_REGISTRY_PASS
-    email: drone@stackdot.com
+      - '${DRONE_BRANCH/master/latest}'
+      - '${DRONE_BRANCH}.build-${DRONE_BUILD_NUMBER}'
     storage_driver: overlay
+    when:
+      branch: master
